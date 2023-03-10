@@ -32,6 +32,7 @@
 
 /// Autoshift configuration
 #define AUTO_SHIFT_TIMEOUT 150
+#define AUTO_SHIFT_DISABLED_AT_STARTUP
 
 /// RGB
 // #define RGB_MATRIX_ENABLE

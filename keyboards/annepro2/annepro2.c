@@ -281,6 +281,22 @@ bool process_record_kb(uint16_t keycode, keyrecord_t *record) {
                 return true;
             #endif
 
+            case KC_AP_TOGGLE_AUTOSHIFT:
+                
+                // if autoshift is currently disabled...
+                if (!get_autoshift_state()) {
+                    const ap2_led_t color = {.p.red = 0xff, .p.green = 0x00, .p.blue = 0x00, .p.alpha = 0xff};
+                    ap2_led_sticky_set_key(1, 0, color);
+
+                    autoshift_enable();
+                } else {
+                    ap2_led_unset_sticky_key(1, 0);
+
+                    autoshift_disable();
+                }
+                
+                return false;
+
             default:
                 break;
         }
