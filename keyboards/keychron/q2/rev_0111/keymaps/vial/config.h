@@ -1,0 +1,20 @@
+#pragma once
+
+#define VIAL_KEYBOARD_UID {0xA1, 0x26, 0xA0, 0x7D, 0x20, 0x29, 0x46, 0x67}
+
+#define VIAL_UNLOCK_COMBO_ROWS { 0, 2 }
+#define VIAL_UNLOCK_COMBO_COLS { 0, 13 }
+
+// #define RGB_MATRIX_ENABLE
+// #define ENCODER_ENABLE
+
+#define AUTO_SHIFT_DISABLED_AT_STARTUP
+
+
+// #define RGB_MATRIX_LED_COUNT 61
+// #define DRIVER_LED_TOTAL RGB_MATRIX_LED_COUNT
+#define RGB_MATRIX_FRAMEBUFFER_EFFECTS
+#define RGB_MATRIX_KEYPRESSES
+
+// Disable RGB when board is receiving power but no USB conneciton
+#define RGB_DISABLE_WHEN_USB_SUSPENDED
